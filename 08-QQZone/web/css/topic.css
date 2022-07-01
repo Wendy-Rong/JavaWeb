@@ -1,0 +1,17 @@
+body{
+    background-color: #E8E8FF;
+}
+#div_add_topic{
+    width:80%;
+    margin-left:10%;
+    margin-top:16px;
+}
+#div_to_add{
+    width:80%;
+    margin-left:10%;
+}
+
+.add_reply_title{
+    font-size:16px;width:80%;margin-left:10%;
+    border-bottom: 1px solid lightgray;
+}

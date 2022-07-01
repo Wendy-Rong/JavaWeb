@@ -1,0 +1,40 @@
+<!--<!DOCTYPE html>-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/common.css}">
+    <link rel="stylesheet" th:href="@{/css/topic.css}">
+    <script language="JavaScript">
+        function getTopic() {
+            window.location.href = "page.do?operate=page&page=frames/main";
+        }
+    </script>
+</head>
+<body>
+<div id="div_add_topic">
+    <p class="add_reply_title">添加新日志</p>
+    <form action="topic.do" method="post">
+        <input type="hidden" name="operate" value="addTopic"/>
+        <table>
+            <tr>
+                <th style="width: 25%">日志标题：</th>
+                <td><input type="text" name="title" style="width: 90%" value="">
+                </td>
+            </tr>
+            <tr>
+                <th>日志内容：</th>
+                <td><textarea name="content" rows="5" style="width: 90%">我想再发表一篇日志！</textarea></td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input type="submit" value=" 发 表 "/>
+                    <input type="reset" value=" 重 置 "/>
+                    <input type="button" value=" 返回日志列表 " th:onclick="|getTopic()|"/>
+                </th>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>
